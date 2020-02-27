@@ -43,8 +43,16 @@ const [awayTotal, awaySetTotal] = useState(0);
           className="homeButtons__fieldGoal">Home Field Goal</button>
         </div>
         <div className="awayButtons">
-          <button className="awayButtons__touchdown">Away Touchdown</button>
-          <button className="awayButtons__fieldGoal">Away Field Goal</button>
+          <button 
+          onClick={() => {
+            awaySetTotal(awayTotal + 6);
+          }}
+          className="awayButtons__touchdown">Away Touchdown</button>
+          <button 
+          onClick={() => {
+            awaySetTotal(awayTotal + 1);
+          }}
+          className="awayButtons__fieldGoal">Away Field Goal</button>
         </div>
       </section>
     </div>
